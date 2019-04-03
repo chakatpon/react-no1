@@ -1,0 +1,63 @@
+body {
+    
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    top:0;
+    left:0;
+    background-color: #222;
+    height: 100vh;
+    z-index: 0;
+}
+
+.sidebar {
+    position: fixed;
+    display: block;
+    background-color: #444;
+    width: 230px;
+    height: 90vh;
+    top: 0;
+    left:0;
+    z-index: 4;
+    margin-top: 80px;
+    margin-left: 20px;
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.sidebar .logo {
+    position: relative;
+    padding: 0.5rem 0.7rem;
+    display: block;
+    
+
+}
+
+.sidebar .nav {
+    display: block;
+    margin-top: 20px;
+
+}
+
+.sidebar-wrapper {
+    display: block;
+    
+}
+
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 80px 20px 20px 280px;
+}
+
+hr {
+    margin: 0 10px;
+    border-top: 1px solid #eee;
+}
+
+
+

@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import DemoApp from './layouts/DemoApp';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import 'bootstrap/dist/css/bootstrap.css';
+import './assets/css/demoStyle.css';
+import './assets/icon/fontawesome-free-5.8.1-web/css/all.css';
+
+const hist = createBrowserHistory();
+
+ReactDOM.render(
+    <Router history={hist} >
+        <Switch>
+            <Route path="/demo" render={() => <DemoApp/>}/>
+            <Redirect to="/demo/home" from="/"/>
+        </Switch>
+    </Router>
+
+, document.querySelector("#root"));
